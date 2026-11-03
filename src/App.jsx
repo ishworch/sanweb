@@ -1,1 +1,7 @@
-export default function App() { return <h1>Welcome to SAN Restro & Party Venue</h1>; }
+import Home from "./pages/home";
+
+function App() {
+  return <Home />;
+}
+
+export default App;
