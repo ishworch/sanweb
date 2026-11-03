@@ -6,7 +6,7 @@ import "./home.css";
 ========================= */
 
 import logo from "../assets/logo.png";
-import hero from "../assets/hero.png";
+
 
 import img from "../assets/img.jpg";
 import img2 from "../assets/img2.jpg";
@@ -205,15 +205,7 @@ function Home() {
             </a>
 
 
-            {/* Mobile booking button */}
 
-            <a
-              href="#contact"
-              className="mobile-book-button"
-              onClick={closeMenu}
-            >
-              Book Your Event
-            </a>
 
           </nav>
 
@@ -265,7 +257,7 @@ function Home() {
         <div className="hero-background">
 
           <img
-            src={hero}
+            src={img6}
             alt="SAN Restro and Party Venue"
           />
 
@@ -1097,7 +1089,7 @@ function Home() {
                   </span>
 
                   <strong>
-                    9843052051
+                    9843052051 and 9703090244
                   </strong>
 
                 </a>
