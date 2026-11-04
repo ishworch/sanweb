@@ -7,23 +7,19 @@ import "./home.css";
 
 import logo from "../assets/logo.png";
 
-
 import img from "../assets/img.jpg";
 import img2 from "../assets/img2.jpg";
-import img3 from "../assets/img3.jpg";
 import img4 from "../assets/img4.jpg";
-import img5 from "../assets/img5.jpg";
 import img6 from "../assets/img6.jpg";
 import img7 from "../assets/img7.jpg";
 import img8 from "../assets/img8.jpg";
-import img9 from "../assets/img9.jpg";
 import img10 from "../assets/img10.jpg";
 import img11 from "../assets/img11.jpeg";
 import img12 from "../assets/img12.jpeg";
 import img13 from "../assets/img13.jpeg";
 
-/* Team */
-import president from "../assets/President.png";
+/* TEAM */
+import president from "../assets/President.jpeg";
 import manager from "../assets/Manager.png";
 
 
@@ -49,47 +45,28 @@ function Home() {
 
       const currentScrollY = window.scrollY;
 
-      /* Always show navbar at top */
       if (currentScrollY <= 20) {
-
         setShowNavbar(true);
-
       }
 
-      /* Scrolling down */
       else if (currentScrollY > lastScrollY) {
-
         setShowNavbar(false);
-
         setMenuOpen(false);
-
       }
 
-      /* Scrolling up */
       else if (currentScrollY < lastScrollY) {
-
         setShowNavbar(true);
-
       }
 
       lastScrollY = currentScrollY;
     };
 
-
-    window.addEventListener(
-      "scroll",
-      handleScroll,
-      { passive: true }
-    );
-
+    window.addEventListener("scroll", handleScroll, {
+      passive: true
+    });
 
     return () => {
-
-      window.removeEventListener(
-        "scroll",
-        handleScroll
-      );
-
+      window.removeEventListener("scroll", handleScroll);
     };
 
   }, []);
@@ -111,13 +88,10 @@ function Home() {
   const eventImages = [
     img,
     img2,
-    img3,
     img4,
-    img5,
     img6,
     img7,
     img8,
-    img9,
     img10,
     img11,
     img12,
@@ -128,7 +102,6 @@ function Home() {
   return (
 
     <div className="home-page">
-
 
       {/* =================================================
           NAVBAR
@@ -144,7 +117,6 @@ function Home() {
 
         <div className="nav-container">
 
-
           {/* LOGO */}
 
           <a
@@ -152,12 +124,10 @@ function Home() {
             className="nav-logo"
             onClick={closeMenu}
           >
-
             <img
               src={logo}
               alt="SAN Restro & Party Venue"
             />
-
           </a>
 
 
@@ -169,43 +139,25 @@ function Home() {
             }`}
           >
 
-            <a
-              href="#home"
-              onClick={closeMenu}
-            >
+            <a href="#home" onClick={closeMenu}>
               Home
             </a>
 
-            <a
-              href="#about"
-              onClick={closeMenu}
-            >
+            <a href="#about" onClick={closeMenu}>
               About
             </a>
 
-            <a
-              href="#events"
-              onClick={closeMenu}
-            >
+            <a href="#events" onClick={closeMenu}>
               Events
             </a>
 
-            <a
-              href="#team"
-              onClick={closeMenu}
-            >
+            <a href="#team" onClick={closeMenu}>
               Our Team
             </a>
 
-            <a
-              href="#contact"
-              onClick={closeMenu}
-            >
+            <a href="#contact" onClick={closeMenu}>
               Contact
             </a>
-
-
-
 
           </nav>
 
@@ -226,18 +178,14 @@ function Home() {
             className={`hamburger ${
               menuOpen ? "active" : ""
             }`}
-            onClick={() =>
-              setMenuOpen(!menuOpen)
-            }
+            onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Toggle navigation menu"
             aria-expanded={menuOpen}
             type="button"
           >
-
             <span></span>
             <span></span>
             <span></span>
-
           </button>
 
         </div>
@@ -249,10 +197,7 @@ function Home() {
           HERO
       ================================================= */}
 
-      <section
-        className="hero"
-        id="home"
-      >
+      <section className="hero" id="home">
 
         <div className="hero-background">
 
@@ -263,9 +208,7 @@ function Home() {
 
         </div>
 
-
         <div className="hero-overlay"></div>
-
 
         <div className="hero-content">
 
@@ -273,19 +216,16 @@ function Home() {
             SAN RESTRO & PARTY VENUE
           </p>
 
-
           <h1>
             Where Good Food
             <br />
             Meets Great Moments.
           </h1>
 
-
           <p className="hero-description">
             A place to dine, celebrate, connect and create
             unforgettable memories.
           </p>
-
 
           <div className="hero-buttons">
 
@@ -307,11 +247,7 @@ function Home() {
 
         </div>
 
-
-        <a
-          href="#about"
-          className="scroll-down"
-        >
+        <a href="#about" className="scroll-down">
 
           <span>
             Scroll to explore
@@ -424,7 +360,7 @@ function Home() {
         <div className="dual-image">
 
           <img
-            src={img2}
+            src={img7}
             alt="SAN Restaurant"
           />
 
@@ -527,8 +463,10 @@ function Home() {
 
         <div className="dual-image">
 
+          {/* FIXED: img3 replaced with existing img6 */}
+
           <img
-            src={img3}
+            src={img6}
             alt="SAN Event Venue"
           />
 
@@ -702,44 +640,40 @@ function Home() {
 
             {/* FIRST SET */}
 
-            {eventImages.map(
-              (image, index) => (
+            {eventImages.map((image, index) => (
 
-                <div
-                  className="event-slide"
-                  key={`first-${index}`}
-                >
+              <div
+                className="event-slide"
+                key={`first-${index}`}
+              >
 
-                  <img
-                    src={image}
-                    alt={`SAN Event ${index + 1}`}
-                  />
+                <img
+                  src={image}
+                  alt={`SAN Event ${index + 1}`}
+                />
 
-                </div>
+              </div>
 
-              )
-            )}
+            ))}
 
 
             {/* DUPLICATE SET */}
 
-            {eventImages.map(
-              (image, index) => (
+            {eventImages.map((image, index) => (
 
-                <div
-                  className="event-slide"
-                  key={`second-${index}`}
-                >
+              <div
+                className="event-slide"
+                key={`second-${index}`}
+              >
 
-                  <img
-                    src={image}
-                    alt={`SAN Event ${index + 1}`}
-                  />
+                <img
+                  src={image}
+                  alt={`SAN Event ${index + 1}`}
+                />
 
-                </div>
+              </div>
 
-              )
-            )}
+            ))}
 
           </div>
 
