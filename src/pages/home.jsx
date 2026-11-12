@@ -1082,7 +1082,7 @@ function Home() {
 
               <div className="team-info">
 
-                <span>PRESIDENT</span>
+                <span>Director</span>
 
                 <h3>Madhav P. Chalise</h3>
 
