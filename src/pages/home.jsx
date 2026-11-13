@@ -33,6 +33,8 @@ import vid2 from "../assets/vid2.mp4";
 import vid3 from "../assets/vid3.mp4";
 import vid4 from "../assets/vid4.mp4";
 import vid5 from "../assets/vid5.mp4";
+import vid6 from "../assets/vid6.mp4";
+import vid7 from "../assets/vid7.mp4";
 
 // Team
 import president from "../assets/President.jpeg";
@@ -91,7 +93,9 @@ function Home() {
     vid2,
     vid3,
     vid4,
-    vid5
+    vid5,
+    vid6,
+    vid7
   ];
 
 
